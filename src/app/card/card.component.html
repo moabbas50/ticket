@@ -1,0 +1,29 @@
+<div class="section">
+  <div class="container">
+    <div class="card">
+      <div class="topCard">
+        <h4>عرض التذكرة الخاصة بالفيلم</h4>
+        <span (click)="copyToClipboard()" class="p-input-icon-left">
+          <i pTooltip="copy" tooltipPosition="top" class="fa-regular fa-copy"></i>
+          <input pInputText type="text" [(ngModel)]="value" />
+        </span>
+        <p>فعال حتي 15 يوليو 2023</p>
+        <i pTooltip="حزف" tooltipPosition="bottom" tooltipcolor="blue" class="fa-regular fa-trash-can"></i>
+      </div>
+      <div class="median"></div>
+      <div class="bottomCard">
+        <div class="qrcode">
+          <qrcode [qrdata]="'Your QR code data string'" [width]="86" [errorCorrectionLevel]="'M'"></qrcode>
+
+        </div>
+        <div class="share">
+          <p>خصم</p>
+          <div>
+            <button class="btn">مشاركه <i class="fa-regular fa-paper-plane"></i></button>
+            <span>25%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

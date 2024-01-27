@@ -1,0 +1,29 @@
+#table {
+  direction: rtl;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 25%;
+}
+.th {
+  color: rgba(0, 0, 0, 0.479);
+  font-size: smaller;
+}
+
+.ic-T{
+  border-radius: 25%;
+  padding: 8px;
+  background-color:rgb(236, 248, 247) ;
+  color: rgba(63, 61, 163, 0.74) ;
+}
+.ic-D{
+  padding: 1.5px;
+  color: rgba(63, 61, 163, 0.74) ;
+  border: 1px solid rgba(63, 61, 163, 0.74)  ;
+  border-radius: 25%;
+  font-weight:bold;
+}
+.ic-D:hover{
+  cursor: pointer;
+  color: rgba(89, 87, 165, 0.74) ;
+  border: 1px solid rgba(89, 87, 165, 0.74)  ;
+}

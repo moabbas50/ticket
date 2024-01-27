@@ -1,0 +1,38 @@
+<div class="main">
+  <div class="container">
+    <div class="head">
+      <button class="btn">تعديل <i class="fa-regular fa-pen-to-square"></i></button>
+      <h3> تذكرة رقم #2342 <i class="pi pi-arrow-right"></i></h3>
+    </div>
+    <!-- body -->
+    <div class="section">
+      <app-card id="card"> </app-card>
+      <app-chartt id="charts"></app-chartt>
+    </div>
+    <div class="nav">
+      <div class="book">
+        <button class="btn-help">حجز تذكرة جديدة</button>
+        <p>مفعلة</p>
+        <div class="switch">
+          <p-inputSwitch class="p-inputswitch-checked" [(ngModel)]="checked"></p-inputSwitch>
+        </div>
+      </div>
+      <div class="sale"><i class=""></i>
+        <button pButton type="button" class="reasonButton"><i class="pi pi-sort-alt"></i></button>
+        <button pButton type="button" class="reasonButton"><i class="fa-solid fa-sliders"></i></button>
+        <span class="p-input-icon-right">
+          <i class="pi pi-search"></i>
+          <input type="text" class="resoninput" placeholder="بحث عن.." pInputText [(ngModel)]="value" />
+        </span>
+        <h3>مبيعات التذاكر</h3>
+      </div>
+
+    </div>
+    <div class="table">
+      <app-table></app-table>
+    </div>
+    <div id="language"><a class="AR-EN" routerLink="/English">En/</a><a class="AR-EN" routerLink="/Arabic">Ar</a></div>
+  </div>
+
+</div>
+

@@ -1,0 +1,29 @@
+<div class="section">
+  <div class="container">
+    <div class="card">
+      <div class="topCard">
+        <h4>View the movie ticket</h4>
+        <span (click)="copyToClipboard()" class="p-input-icon-left">
+          <i pTooltip="copy" tooltipPosition="top" class="fa-regular fa-copy"></i>
+          <input pInputText type="text" [(ngModel)]="value" />
+        </span>
+        <p>Effective until 15 July 2023</p>
+        <i pTooltip="remove" tooltipPosition="bottom" tooltipcolor="blue" class="fa-regular fa-trash-can"></i>
+      </div>
+      <div class="median"></div>
+      <div class="bottomCard">
+        <div class="qrcode">
+          <qrcode [qrdata]="'Your QR code data string'" [width]="86" [errorCorrectionLevel]="'M'"></qrcode>
+
+        </div>
+        <div class="share">
+          <p>discount</p>
+          <div>
+            <button class="btn">share <i class="fa-regular fa-paper-plane"></i></button>
+            <span>25%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

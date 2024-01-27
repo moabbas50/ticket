@@ -1,0 +1,38 @@
+<div class="main">
+  <div class="container">
+    <div class="head">
+      <button class="btn">Edit <i class="fa-regular fa-pen-to-square"></i></button>
+      <h3>Ticket Number #2342 <i class="pi pi-arrow-right"></i></h3>
+    </div>
+    <!-- body -->
+    <div class="section">
+      <app-card-en id="card"> </app-card-en>
+      <app-chart-en id="charts"></app-chart-en>
+    </div>
+    <div class="nav">
+      <div class="book">
+        <button class="btn-help">Book a new ticket</button>
+        <p>Enabled</p>
+        <div class="switch">
+          <p-inputSwitch class="p-inputswitch-checked" [(ngModel)]="checked"></p-inputSwitch>
+        </div>
+      </div>
+      <div class="sale"><i class=""></i>
+        <button pButton type="button" class="reasonButton"><i class="pi pi-sort-alt"></i></button>
+        <button pButton type="button" class="reasonButton"><i class="fa-solid fa-sliders"></i></button>
+        <span class="p-input-icon-right">
+          <i class="pi pi-search"></i>
+          <input type="text" class="resoninput" placeholder=" Search.." pInputText [(ngModel)]="value" />
+        </span>
+        <h3>Ticket Sales</h3>
+      </div>
+
+    </div>
+    <div class="table">
+      <app-table-en></app-table-en>
+    </div>
+    <div id="language"><a class="AR-EN" routerLink="/English">En/</a><a class="AR-EN" routerLink="/Arabic">Ar</a></div>
+  </div>
+
+</div>
+

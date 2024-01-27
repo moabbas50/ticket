@@ -1,0 +1,44 @@
+<div id="table">
+  <p-table #dt1 dataKey="id" [rows]="4" [showCurrentPageReport]="true" [paginator]="true"
+    currentPageReportTemplate="show {last} out of{totalRecords}  " [rowsPerPageOptions]="[4, 10,25, 50]"
+    [globalFilterFields]="['name', 'country.name', 'representative.name']" [value]="products"    >
+
+
+    <ng-template   pTemplate="header"   class="thead" >
+
+      <tr class="tr" >
+        <th class="th">#</th>
+        <th class="th">user</th>
+        <th class="th">Ticket Number</th>
+        <th class="th" pSortableColumn="code">Ticket Price<p-sortIcon field="code"></p-sortIcon>
+        </th >
+        <th class="th"> cinema </th>
+        <th class="th"> persons numbers </th>
+        <th class="th"> Number of purchases</th>
+        <th class="th">Ticket</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.id }}</td>
+        <td style="display: flex;align-items: center;justify-content: space-around;"><img class="img" [src]="product.image" alt="">{{ product.name }} </td>
+        <td>{{ product.code }}</td>
+        <td>{{ product.price }} </td>
+        <td>{{ product.description }}<span pTooltip="Sidnawi Mall, Burj Al Arab" tooltipPosition="top">....</span></td>
+        <td>{{ product.number }}</td>
+        <td>{{ product.Numberofpurchases }}</td>
+        <td><i class="ic-T fa-solid fa-server"></i> {{ product.ticket }} <i class="ic-D pi pi-download"></i></td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7">No customers found.</td>
+      </tr>
+    </ng-template>
+    <!-- <ng-template pTemplate="summary">
+      <div class="flex align-items-center justify-content-between">
+        In total there are {{products ? products.length : 0 }} products.
+      </div>
+    </ng-template> -->
+  </p-table>
+</div>
